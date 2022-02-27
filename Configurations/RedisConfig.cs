@@ -9,7 +9,8 @@ namespace FavoriteFoodApi.Configurations
         private static ConnectionMultiplexer CreateConnectionMultiplexer()
         {
             var redisPort = Environment.GetEnvironmentVariable("FavoriteFoodApiRedisPort");
-            var connectionString = $"localhost:{redisPort},abortConnect=false";
+            var redisHost = Environment.GetEnvironmentVariable("FavoriteFoodApiRedisHost");
+            var connectionString = $"{redisHost}:{redisPort},abortConnect=false";
             return ConnectionMultiplexer.Connect(connectionString);
         }
 
