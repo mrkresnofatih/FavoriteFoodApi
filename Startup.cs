@@ -50,6 +50,7 @@ namespace FavoriteFoodApi
             }
             
             logger.LogInformation($"Environment is {Configuration["EnvName"]}.");
+            logger.LogInformation("Running");
             
             app.UseAppExceptionHandler();
 
