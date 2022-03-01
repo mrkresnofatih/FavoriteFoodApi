@@ -3,11 +3,8 @@ services:
   redisapp:
     container_name: "redis"
     image: redis:6.2
-    command: redis-server /usr/local/etc/redis/redis.conf
     ports:
       - "8004:6379"
-    volumes:
-      - $PWD/Redis/redis.conf:/usr/local/etc/redis/redis.conf
   
   webapi:
     container_name: "food-api"

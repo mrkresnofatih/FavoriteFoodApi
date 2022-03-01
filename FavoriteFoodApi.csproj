@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <Content Include=".github\workflows\automate.yml" />
+    <Content Include=".github\workflows\sonarscan.yml" />
   </ItemGroup>
 
 </Project>
